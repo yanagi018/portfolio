@@ -14,9 +14,10 @@
       font-weight: 300; /* 全体を細字に */
     }
     .container {
-      max-width: 900px;
+      width: 100%; /* 画面幅いっぱいに */
+      max-width: 1400px; /* 上限を広げる */
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 60px 40px; /* 横の余白を少し増やす */
     }
     header {
       display: flex;
@@ -29,19 +30,19 @@
     }
     header h1 {
       margin: 0;
-      font-size: 1rem;
+      font-size: 1.4rem; /* さらに大きく */
       font-weight: 600; /* 名前だけは少し太めに */
       letter-spacing: -0.5px;
     }
     header .meta {
-      margin-top: 10px;
-      font-size: 1rem;
+      margin-top: 12px;
+      font-size: 1.1rem; /* 少し大きく */
       color: #444;
       font-weight: 300;
     }
     header .links {
-      margin-top: 8px;
-      font-size: 0.95rem;
+      margin-top: 10px;
+      font-size: 1rem; /* 少し大きく */
       font-weight: 300;
     }
     header a {
@@ -93,7 +94,11 @@
       font-weight: 300;
     }
     @media (max-width: 800px) {
+      .container { padding: 40px 20px; }
       .projects { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.1rem; }
+      header .meta { font-size: 1rem; }
+      header .links { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -103,7 +108,7 @@
       <h1>Shun Yanagisawa</h1>
       <div class="meta">Graphic Designer & Art Director / Tokyo, Japan</div>
       <div class="links">
-        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="mailto:yvnvgin@gmail.com">yvnvgin@gmail.com</a>
         <a href="https://instagram.com/_yanagiii">@_yanagiii</a>
       </div>
     </header>
@@ -111,10 +116,10 @@
     <main class="projects">
       <div class="project-group">
         <div class="project">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1NTAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNTUwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nI2VlZScvPjx0ZXh0IHg9JzI3NScgeT0nMjAwJyBmb250LXNpemU9JzI0JyBmb250LWZhbWlseT0nbW9ub3NwYWNlJyBmaWxsPScjY2NjJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz5HcmFwaGljIDE8L3RleHQ+PC9zdmc+" alt="Project 1">
+          <img src="images/project1.jpg" alt="Project 1">
         </div>
         <div class="project">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1NTAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNTUwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nI2VlZScvPjx0ZXh0IHg9JzI3NScgeT0nMjAwJyBmb250LXNpemU9JzI0JyBmb250LWZhbWlseT0nbW9ub3NwYWNlJyBmaWxsPScjY2NjJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz5HcmFwaGljIDEgLSAxPC90ZXh0Pjwvc3ZnPg==" alt="Project 1 extra">
+          <img src="images/project1_extra.jpg" alt="Project 1 extra">
         </div>
         <div class="caption">Project 1 Title</div>
         <div class="sub">Role / Collaboration info</div>
@@ -122,7 +127,7 @@
 
       <div class="project-group">
         <div class="project">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1NTAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNTUwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nI2VlZScvPjx0ZXh0IHg9JzI3NScgeT0nMjAwJyBmb250LXNpemU9JzI0JyBmb250LWZhbWlseT0nbW9ub3NwYWNlJyBmaWxsPScjY2NjJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz5HcmFwaGljIDI8L3RleHQ+PC9zdmc+" alt="Project 2">
+          <img src="images/project2.jpg" alt="Project 2">
         </div>
         <div class="caption">Project 2 Title</div>
         <div class="sub">Role / Collaboration info</div>
@@ -130,7 +135,7 @@
 
       <div class="project-group">
         <div class="project">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1NTAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNTUwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nI2VlZScvPjx0ZXh0IHg9JzI3NScgeT0nMjAwJyBmb250LXNpemU9JzI0JyBmb250LWZhbWlseT0nbW9ub3NwYWNlJyBmaWxsPScjY2NjJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz5HcmFwaGljIDM8L3RleHQ+PC9zdmc+" alt="Project 3">
+          <img src="images/project3.jpg" alt="Project 3">
         </div>
         <div class="caption">Project 3 Title</div>
         <div class="sub">Role / Collaboration info</div>
