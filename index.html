@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Shun Yanagisawa | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace, "Courier New", Courier, Consolas, Menlo, Monaco;
+      background: #f9f9f9;
+      color: #111;
+      line-height: 1.6;
+      font-weight: 300; /* 全体を細字に */
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 80px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 30px;
+      text-align: left;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600; /* 名前だけは少し太めに */
+      letter-spacing: -0.5px;
+    }
+    header .meta {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #444;
+      font-weight: 300;
+    }
+    header .links {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+    header a {
+      color: #111;
+      text-decoration: none;
+      margin-right: 12px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.18s;
+      font-weight: 300;
+    }
+    header a:hover {
+      border-color: #111;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 100px; /* プロジェクト間は広め */
+    }
+    .project-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px; /* 同じプロジェクト内の画像は近く */
+    }
+    .project img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .caption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #888; /* 薄めに変更 */
+    }
+    .sub {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: #aaa; /* より薄めに */
+    }
+    footer {
+      text-align: left;
+      margin-top: 100px;
+      font-size: 0.85rem;
+      color: #777;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+      font-weight: 300;
+    }
+    @media (max-width: 800px) {
+      .projects { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Shun Yanagisawa</h1>
+      <div class="meta">Graphic Designer & Art Director / Tokyo, Japan</div>
+      <div class="links">
+        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://instagram.com/_yanagiii">@_yanagiii</a>
+      </div>
+    </header>
+
+    <main class="projects">
+      <div class="project-group">
+        <div class="project">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1NTAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNTUwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nI2VlZScvPjx0ZXh0IHg9JzI3NScgeT0nMjAwJyBmb250LXNpemU9JzI0JyBmb250LWZhbWlseT0nbW9ub3NwYWNlJyBmaWxsPScjY2NjJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz5HcmFwaGljIDE8L3RleHQ+PC9zdmc+" alt="Project 1">
+        </div>
+        <div class="project">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1NTAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNTUwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nI2VlZScvPjx0ZXh0IHg9JzI3NScgeT0nMjAwJyBmb250LXNpemU9JzI0JyBmb250LWZhbWlseT0nbW9ub3NwYWNlJyBmaWxsPScjY2NjJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz5HcmFwaGljIDEgLSAxPC90ZXh0Pjwvc3ZnPg==" alt="Project 1 extra">
+        </div>
+        <div class="caption">Project 1 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+
+      <div class="project-group">
+        <div class="project">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1NTAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNTUwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nI2VlZScvPjx0ZXh0IHg9JzI3NScgeT0nMjAwJyBmb250LXNpemU9JzI0JyBmb250LWZhbWlseT0nbW9ub3NwYWNlJyBmaWxsPScjY2NjJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz5HcmFwaGljIDI8L3RleHQ+PC9zdmc+" alt="Project 2">
+        </div>
+        <div class="caption">Project 2 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+
+      <div class="project-group">
+        <div class="project">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1NTAnIGhlaWdodD0nNDAwJz48cmVjdCB3aWR0aD0nNTUwJyBoZWlnaHQ9JzQwMCcgZmlsbD0nI2VlZScvPjx0ZXh0IHg9JzI3NScgeT0nMjAwJyBmb250LXNpemU9JzI0JyBmb250LWZhbWlseT0nbW9ub3NwYWNlJyBmaWxsPScjY2NjJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJz5HcmFwaGljIDM8L3RleHQ+PC9zdmc+" alt="Project 3">
+        </div>
+        <div class="caption">Project 3 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+    </main>
+
+    <footer>
+      © 2025 Shun Yanagisawa
+    </footer>
+  </div>
+</body>
+</html>
