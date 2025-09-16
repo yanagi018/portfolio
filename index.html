@@ -15,7 +15,7 @@
     }
     .container {
       width: 100%;
-      max-width: 1400px;
+      max-width: 1200px; /* 少し縮める */
       margin: 0 auto;
       padding: 60px 40px;
     }
@@ -59,7 +59,7 @@
     .projects {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 100px;
+      gap: 80px; /* 少し詰める */
     }
     .project-group {
       display: grid;
@@ -67,9 +67,11 @@
       gap: 20px;
     }
     .project img {
-      width: 100%;
+      width: 90%; /* 幅を少し縮める */
+      max-width: 1000px; /* 最大幅を制限 */
       height: auto;
       display: block;
+      margin: 0 auto; /* 中央寄せ */
     }
     .caption {
       margin-top: 8px;
@@ -98,6 +100,7 @@
       header h1 { font-size: 1.1rem; }
       header .meta { font-size: 1rem; }
       header .links { font-size: 0.95rem; }
+      .project img { width: 100%; max-width: 100%; }
     }
   </style>
 </head>
@@ -186,8 +189,8 @@
       </div>
       <div class="project-group">
         <div class="project"><img src="images/project1.jpg" alt="Project 1"></div>
-        <div class="caption">Artwork for Aile The Shota 2nd EP IMA</div>
-        <div class="sub"></div>
+        <div class="caption">Project 1 Title</div>
+        <div class="sub">Role / Collaboration info</div>
       </div>
     </main>
 
