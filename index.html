@@ -8,8 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     html, body {
-  overflow-x: hidden; /* 横スクロール禁止 */
-}
+      overflow-x: hidden; /* 横スクロール禁止 */
+    }
     body {
       margin: 0;
       font-family: 'PT Mono', monospace;
@@ -40,11 +40,11 @@
     header h1,
     header .meta,
     header .links {
-      font-size: 1.2rem; /* 大きく */
+      font-size: 1.2rem;
       font-weight: 400;
-      color: #333; /* 少し濃く */
+      color: #111;
       margin: 0;
-      line-height: 1.1; /* ← ここを追加、数値を小さくすると行間が狭くなる */
+      line-height: 1.2;
     }
     header h1 {
       flex: 1;
@@ -57,7 +57,7 @@
       gap: 4px;
     }
     header a {
-      color: #444;
+      color: #111;
       text-decoration: none;
       margin-right: 12px;
       border-bottom: 1px solid transparent;
@@ -65,7 +65,7 @@
       font-weight: 400;
     }
     header a:hover {
-      border-color: #444;
+      border-color: #111;
     }
     .projects {
       display: grid;
@@ -81,7 +81,7 @@
       text-align: center;
     }
     .project img {
-      width: 100%;   /* フル幅に */
+      width: 100%; /* フル幅に */
       height: auto;
       display: block;
     }
@@ -96,41 +96,42 @@
     .sub {
       font-size: 0.8rem;
       font-weight: 300;
-      color: #666;
+      color: #aaa;
       font-family: 'Noto Sans JP', sans-serif;
     }
     footer {
       text-align: left;
       margin-top: 100px;
       font-size: 0.85rem;
-      color: #444;
+      color: #777;
       border-top: 1px solid #eee;
       padding-top: 20px;
       font-weight: 300;
       font-family: 'PT Mono', monospace;
     }
     @media (max-width: 800px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px; /* ← 名前と自己紹介の間の余白 */
-  }
-  header h1 {
-    font-size: 0.7rem; /* 名前を小さめに */
-  }
-  header .meta,
-  header .links {
-    font-size: 0.7rem; /* 自己紹介・SNSも小さめに */
-  }
+      .container { padding: 0 16px; } /* 余白を小さく */
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px; /* 名前と自己紹介の間に余白 */
+      }
+      header h1 {
+        font-size: 0.7rem;
+      }
+      header .meta,
+      header .links {
+        font-size: 0.7rem;
+      }
       .caption {
-    font-size: 0.7rem; /* モバイル時はさらに小さく */
-  }
-  footer {
-    font-size: 0.7rem; /* モバイル時は小さく */
-  }
-  .projects { margin-top: 220px; }
-       .container { padding: 0 16px; } /* 余白を小さく */
-}
+        font-size: 0.7rem; /* モバイル時は小さめ */
+      }
+      footer {
+        font-size: 0.7rem; /* モバイル時は小さめ */
+      }
+      .projects { margin-top: 220px; }
+      .project img { width: 100%; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -138,7 +139,7 @@
     <header>
       <h1>Shun Yanagisawa</h1>
       <div class="header-right">
-        <div class="meta">Art Director & Graphic Designer / Tokyo, Japan</div>
+        <div class="meta">Graphic Designer & Art Director / Tokyo, Japan</div>
         <div class="links">
           <a href="mailto:yvnvgin@gmail.com">yvnvgin@gmail.com</a>
           <a href="https://instagram.com/_yanagiii">@_yanagiii</a>
@@ -220,8 +221,8 @@
       </div>
       <div class="project-group">
         <div class="project"><img src="images/project1.jpg" alt="Project 1"></div>
-        <div class="caption">Artwork for Aile The Shota 2nd EP IMA</div>
-        <div class="sub"></div>
+        <div class="caption">Project 1 Title</div>
+        <div class="sub">Role / Collaboration info</div>
       </div>
     </main>
 
