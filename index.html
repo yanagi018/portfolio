@@ -131,8 +131,12 @@
         font-size: 0.7rem; /* モバイル時は小さめ */
       }
       .projects { margin-top: 220px; }
-      .project img { width: 100%; max-width: 100%; }
-    }
+      .project img {
+  　　　　width: calc(100% - 24px); /* ← 左右に少し余白を残す */
+ 　　　　 max-width: 100%;
+  　　　　margin: 0 auto;
+  　　　　display: block;
+　　　　}
   </style>
 </head>
 <body>
