@@ -7,6 +7,9 @@
   <!-- Google Fonts: PT Mono & Noto Sans JP for captions -->
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    html, body {
+  overflow-x: hidden; /* 横スクロール禁止 */
+}
     body {
       margin: 0;
       font-family: 'PT Mono', monospace;
@@ -78,11 +81,9 @@
       text-align: center;
     }
     .project img {
-      width: 90%;
-      max-width: 1000px;
+      width: 100%;   /* フル幅に */
       height: auto;
       display: block;
-      margin: 0 auto;
     }
     .caption {
       margin-top: 8px;
@@ -128,6 +129,7 @@
     font-size: 0.7rem; /* モバイル時は小さく */
   }
   .projects { margin-top: 220px; }
+       .container { padding: 0 16px; } /* 余白を小さく */
 }
   </style>
 </head>
