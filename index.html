@@ -83,13 +83,12 @@
       text-align: center;
     }
     .project img {
-      width: 100%;
-      max-width: 1000px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      padding: 0 40px;          /* ← PC時は左右40px */
-      box-sizing: border-box;  /* ← パディング込みで幅を計算 */
+      max-width: 1000px;      /* 最大サイズを指定 */
+  width: calc(100% - 80px); /* 画面幅から左右40pxずつ引いたサイズ */
+  margin: 0 auto;         /* 中央寄せ */
+  display: block;
+  height: auto;
+  box-sizing: border-box;
     }
     .caption {
       margin-top: 8px;
