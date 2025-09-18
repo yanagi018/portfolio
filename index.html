@@ -30,17 +30,17 @@
       left: 0;
       width: 100%;
       display: flex;
-      justify-content: space-between;/* 左は名前、右は自己紹介エリア */
+      justify-content: space-between; /* 左は名前、右は自己紹介エリア */
       align-items: flex-start;
       background: transparent; /* 完全に透明 */
       padding: 20px 40px;
-      border-bottom: none; /* 線も削除 */
+      border-bottom: none;
       z-index: 1000;
     }
     header h1,
     header .meta,
     header .links {
-      font-size: 1.0rem;
+      font-size: 1rem;
       font-weight: 400;
       color: #242424;
       margin: 0;
@@ -56,7 +56,7 @@
       align-items: flex-start;
       gap: 4px;
       text-align: left;
-  margin-right: 40px; /* ← これを追加 */
+      margin-right: 40px;
     }
     header a {
       color: #242424;
@@ -73,7 +73,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 80px;
-      margin-top: 160px; /* ヘッダーの固定分の余白 */
+      margin-top: 160px; /* ヘッダー分の余白 */
     }
     .project-group {
       display: grid;
@@ -84,13 +84,12 @@
     }
     .project img {
       width: 100%;
-  max-width: 1000px;
-  height: auto;
-  display: block;
-  margin-left: 0;       /* 左は詰める */
-  margin-right: auto;   /* 画像を左寄せに */
-  padding-right: 40px;  /* 右にだけ40px余白 */
-  box-sizing: border-box;
+      max-width: 1000px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      padding: 0 40px;          /* ← PC時は左右40px */
+      box-sizing: border-box;  /* ← パディング込みで幅を計算 */
     }
     .caption {
       margin-top: 8px;
@@ -108,9 +107,9 @@
     }
     footer {
       text-align: center;
-      width: 100%;         /* フル幅に広げる */
-      max-width: 1200px;   /* コンテンツ幅を制限 */
-      margin: 100px auto 40px auto;  /* 上に余白100px、下に40px */
+      width: 100%;
+      max-width: 1200px;
+      margin: 100px auto 40px auto;
       font-size: 0.85rem;
       color: #242424;
       border-top: 1px solid #eee;
@@ -120,13 +119,13 @@
     }
     @media (max-width: 800px) {
       .container {
-  padding: 0; /* ← コンテンツ部分は余白を消す */
-}
+        padding: 0;
+      }
       header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 14px; 
-        padding: 20px 16px; /* ← ヘッダーは左右16pxキープ */
+        gap: 14px;
+        padding: 20px 16px; /* ← モバイルは16px */
       }
       header h1 {
         font-size: 0.7rem;
@@ -136,28 +135,27 @@
         font-size: 0.7rem;
       }
       .caption {
-        font-size: 0.6rem; /* モバイル時は小さめ */
+        font-size: 0.6rem;
       }
       .sub {
-        font-size: 0.6rem; /* モバイル時は小さめ */
+        font-size: 0.6rem;
       }
       footer {
-        font-size: 0.7rem; /* モバイル時は小さめ */
-        text-align: center;  /* ← 左寄せから中央寄せに変更 */
+        font-size: 0.7rem;
+        text-align: center;
         margin-top: 100px;
-  padding-top: 20px;
+        padding-top: 20px;
       }
       .projects { margin-top: 220px; }
       .project img {
-    width: calc(100% - 32px); /* ← 左右に16px余白 */
-    margin: 0 auto;
-    display: block;
-  }
-}  /* ← これが抜けてた！ */
-    /* PC専用： */
-@media (min-width: 801px) {
-  /* 消す or 中身を空にする */
-}
+        width: 100%;
+        max-width: 1000px;
+        padding: 0 16px;       /* ← モバイルは16px余白 */
+        margin: 0 auto;
+        display: block;
+        box-sizing: border-box;
+      }
+    }
   </style>
 </head>
 <body>
@@ -251,11 +249,10 @@
         <div class="sub">Role / Collaboration info</div>
       </div>
     </main>
-<footer>
+
+    <footer>
       © 2025 Shun Yanagisawa
     </footer>
-  
   </div>
-
 </body>
 </html>
