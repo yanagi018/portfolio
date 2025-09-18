@@ -28,7 +28,7 @@
       position: fixed; /* 常に画面に固定 */
       top: 0;
       left: 0;
-      width: 100%;
+      width: calc(100% - 0px); /* 明示的に幅を100%にする。余白はpadding/rightブロックで制御 */
       display: flex;
       justify-content: space-between;/* 左は名前、右は自己紹介エリア */
       align-items: flex-start;
@@ -51,7 +51,7 @@
     }
     .header-right {
       margin-left: auto;         /* ← 右に寄せる */
-  margin-right: 40px;        /* ← 左右余白を揃える */
+  margin-right: 40px !important; /* ← 強制的に右余白40px */
   display: flex;
   flex-direction: column;
   align-items: flex-start;   /* ← テキストを左揃えのまま */
