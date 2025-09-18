@@ -25,18 +25,17 @@
       padding: 60px 40px;
     }
     header {
-      position: fixed; /* 常に画面に固定 */
-      top: 0;
-      left: 0;
-      width: 100%;             /* 100%に戻す */
-      display: flex;
-      justify-content: space-between;/* 左は名前、右は自己紹介エリア */
-      align-items: flex-start;
-      background: transparent; /* 完全に透明 */
-      padding: 20px 40px;
-      border-bottom: none; /* 線も削除 */
-      z-index: 1000;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 40px; /* 左右余白40pxずつ */
+  box-sizing: border-box;
+  width: 100%;
+}
     header h1,
     header .meta,
     header .links {
@@ -50,13 +49,20 @@
       flex: 1;
     }
     .header-right {
-      margin-left: auto;        /* 名前の右隣から詰めて配置 */
+  margin-left: auto;       /* 名前側との距離を詰める */
+  margin-right: 40px;       /* 右側余白を40px確保 */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;   /* ← テキストを左揃えのまま */
-  gap: 4px;
+  align-items: flex-start;  /* テキストは左揃え */
   text-align: left;
-    }
+  gap: 4px;
+}
+    .header-right .meta,
+.header-right .links {
+  text-align: left;
+  align-self: flex-start;
+}
+    
     header a {
       color: #242424;
       text-decoration: none;
