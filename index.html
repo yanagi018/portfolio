@@ -111,12 +111,14 @@
       font-family: 'PT Mono', monospace;
     }
     @media (max-width: 800px) {
-      .container { padding: 0 16px; } 
+      .container {
+  padding: 0; /* ← コンテンツ部分は余白を消す */
+}
       header {
         flex-direction: column;
         align-items: flex-start;
         gap: 14px; 
-        padding: 0;
+        padding: 20px 16px; /* ← ヘッダーは左右16pxキープ */
       }
       header h1 {
         font-size: 0.7rem;
@@ -136,7 +138,7 @@
       }
       .projects { margin-top: 220px; }
       .project img {
-    width: calc(100% - 32px); /* ← 画像にだけ16px余白を与える */
+    width: calc(100% - 32px); /* ← 左右に16px余白 */
     margin: 0 auto;
     display: block;
   }
