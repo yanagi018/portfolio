@@ -25,14 +25,14 @@
       padding: 60px 40px;
     }
     header {
-      position: fixed;
+      position: fixed; /* 常に画面に固定 */
       top: 0;
       left: 0;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; /* 左は名前、右は自己紹介エリア */
       align-items: flex-start;
-      background: transparent;
+      background: transparent; /* 完全に透明 */
       padding: 20px 40px;
       border-bottom: none;
       z-index: 1000;
@@ -40,7 +40,7 @@
     header h1,
     header .meta,
     header .links {
-      font-size: 1.0rem;
+      font-size: 1rem;
       font-weight: 400;
       color: #242424;
       margin: 0;
@@ -73,19 +73,23 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 80px;
-      margin-top: 160px;
+      margin-top: 160px; /* ヘッダー分の余白 */
     }
     .project-group {
-      padding: 0 40px;        /* ← PC時は左右40pxの余白 */
-      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      justify-items: center;
       text-align: center;
     }
     .project img {
       width: 100%;
-      max-width: 1000px;      /* 最大幅 */
+      max-width: 1000px;
       height: auto;
       display: block;
       margin: 0 auto;
+      padding: 0 40px;          /* ← PC時は左右40px */
+      box-sizing: border-box;  /* ← パディング込みで幅を計算 */
     }
     .caption {
       margin-top: 8px;
@@ -120,8 +124,8 @@
       header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 14px; 
-        padding: 20px 16px;
+        gap: 14px;
+        padding: 20px 16px; /* ← モバイルは16px */
       }
       header h1 {
         font-size: 0.7rem;
@@ -138,12 +142,18 @@
       }
       footer {
         font-size: 0.7rem;
+        text-align: center;
         margin-top: 100px;
         padding-top: 20px;
       }
       .projects { margin-top: 220px; }
-      .project-group {
-        padding: 0 16px;    /* ← モバイルは左右16px */
+      .project img {
+        width: 100%;
+        max-width: 1000px;
+        padding: 0 16px;       /* ← モバイルは16px余白 */
+        margin: 0 auto;
+        display: block;
+        box-sizing: border-box;
       }
     }
   </style>
@@ -162,13 +172,82 @@
     </header>
 
     <main class="projects">
-      <!-- プロジェクト群 -->
+      <!-- Project 15 to Project 1 -->
       <div class="project-group">
         <div class="project"><img src="images/project15.jpg" alt="Project 15"></div>
         <div class="caption">Project 15 Title</div>
         <div class="sub">Role / Collaboration info</div>
       </div>
-      <!-- 以下省略（同じ構造で繰り返し） -->
+      <div class="project-group">
+        <div class="project"><img src="images/project14.jpg" alt="Project 14"></div>
+        <div class="caption">Project 14 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project13.jpg" alt="Project 13"></div>
+        <div class="caption">Project 13 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project12.jpg" alt="Project 12"></div>
+        <div class="caption">Project 12 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project11.jpg" alt="Project 11"></div>
+        <div class="caption">Project 11 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project10.jpg" alt="Project 10"></div>
+        <div class="caption">Project 10 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project9.jpg" alt="Project 9"></div>
+        <div class="caption">Project 9 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project8.jpg" alt="Project 8"></div>
+        <div class="caption">Project 8 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project7.jpg" alt="Project 7"></div>
+        <div class="caption">Project 7 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project6.jpg" alt="Project 6"></div>
+        <div class="caption">Project 6 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project5.jpg" alt="Project 5"></div>
+        <div class="caption">Project 5 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project4.jpg" alt="Project 4"></div>
+        <div class="caption">Project 4 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project3.jpg" alt="Project 3"></div>
+        <div class="caption">Project 3 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project2.jpg" alt="Project 2"></div>
+        <div class="caption">Project 2 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
+      <div class="project-group">
+        <div class="project"><img src="images/project1.jpg" alt="Project 1"></div>
+        <div class="caption">Project 1 Title</div>
+        <div class="sub">Role / Collaboration info</div>
+      </div>
     </main>
 
     <footer>
