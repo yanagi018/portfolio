@@ -83,7 +83,7 @@
       text-align: center;
     }
     .project img {
-      width: calc(100% - 80px); /* ← 常に左右40pxずつ余白を確保 */
+      width: 100%;            /* ← ここをシンプルに */
       max-width: 1000px;   /* ← 最大幅を決める */
       height: auto;
       display: block;
@@ -151,6 +151,17 @@
     display: block;
   }
 }  /* ← これが抜けてた！ */
+    /* PC専用：右側に常に40pxの余白を確保 */
+@media (min-width: 801px) {
+  .project img {
+    width: calc(100% - 40px); /* 本体は親幅から右余白ぶん引く */
+    max-width: 1000px;        /* 既存と同じ最大幅 */
+    margin-left: 0;           /* 左は詰める */
+    margin-right: 40px;       /* 右だけ余白を固定で確保 */
+    display: block;
+    box-sizing: border-box;
+  }
+}
   </style>
 </head>
 <body>
